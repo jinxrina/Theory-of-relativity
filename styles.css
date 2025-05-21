@@ -1,0 +1,42 @@
+/* ----------  BASE LAYOUT ---------- */
+*{box-sizing:border-box;margin:0;padding:0;font-family:system-ui,Arial,sans-serif;color:#222}
+body{line-height:1.6;background:#f5f5f5}
+header{background:#1d3557;color:#fff;padding:2rem 1rem;text-align:center}
+header h1{font-size:clamp(1.8rem,4vw,3rem);margin-bottom:.4rem}
+nav{margin-top:1rem}
+nav a{color:#ffd166;text-decoration:none;margin:.3rem .6rem;font-weight:600}
+nav a:hover{opacity:.7}
+
+/* ----------  SECTIONS ---------- */
+section{padding:3rem 5vw;max-width:900px;margin:auto;background:#fff;margin-top:2rem;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+h2{font-size:1.6rem;margin-bottom:1rem;color:#1d3557}
+p{margin:.6rem 0}
+code{background:#eef;padding:.1rem .3rem;border-radius:4px}
+strong{color:#e63946}
+
+/* ----------  FLEX UTILS ---------- */
+.flex{display:flex;gap:1rem;align-items:center;flex-wrap:wrap}
+.flex-col{flex-direction:column}
+
+/* ----------  DEMO SLIDERS ---------- */
+input[type=range]{width:100%}
+.demo-box{background:#f9fbff;border:1px solid #dde;padding:1rem;border-radius:6px;margin-top:1rem}
+.output{font-size:1.3rem;margin-top:.4rem;color:#1d3557}
+
+/* ----------  SPACESHIP CANVAS ---------- */
+#spaceCanvas{width:100%;max-width:700px;aspect-ratio:3/1;border:1px solid #ccd;background:#000;border-radius:6px;margin-top:1rem}
+.label{font-size:.9rem;color:#555;text-align:center;margin-top:.2rem}
+
+/* ----------  TRAIN ANIMATION ---------- */
+#trainBox{position:relative;background:#eef;border:1px solid #ccd;overflow:hidden;border-radius:6px;height:220px;margin-top:1rem}
+#train{position:absolute;height:60px;width:300px;background:#555;bottom:30px;left:-320px;border-radius:8px}
+#wheel1,#wheel2{position:absolute;width:40px;height:40px;background:#333;border-radius:50%;bottom:-20px}
+#wheel1{left:40px} #wheel2{right:40px}
+#boltLeft,#boltRight{position:absolute;width:2px;height:90px;background:gold;top:30px;opacity:0}
+.caption{font-size:.9rem;margin-top:.5rem;color:#555;text-align:center}
+
+/* ----------  MEDIA ---------- */
+@media(max-width:600px){
+    section{padding:2rem 1rem}
+    .flex{flex-direction:column}
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Theory of Relativity – Why Time Can Seem to Run Backwards</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Einstein's Relativity &nbsp;|&nbsp; When Time Plays Tricks</h1>
+        <nav>
+            <a href="#special">Special Relativity</a>
+            <a href="#gravity">Gravity & Time</a>
+            <a href="#backwards">Can Time Run Backwards?</a>
+        </nav>
+    </header>
+
+    <!-- ============ OVERVIEW ============ -->
+    <section id="overview">
+        <h2>1. A 30-Second Overview</h2>
+        <p>
+            Albert Einstein's Theory of Relativity comes in two parts:
+        </p>
+        <ul>
+            <li><strong>Special Relativity</strong> (1905) – shows that space and time are woven together into spacetime, and that moving clocks tick slower.</li>
+            <li><strong>General Relativity</strong> (1915) – adds gravity, predicting that clocks in stronger gravity also run slower.</li>
+        </ul>
+        <p>
+            Combined, these ideas let different observers disagree about <em>which</em> events happen first. In extreme cases, the order can flip—making it look as if time ran backward. Below we break this down with numbers and cartoons you can play with.
+        </p>
+    </section>
+
+    <!-- ============ SPECIAL RELATIVITY ============ -->
+    <section id="special">
+        <h2>2. Time Dilation Demo (Special Relativity)</h2>
+        <p>
+            Drag the slider to set a ship's speed. Watch how its onboard clock slows according to the famous factor
+            <code>γ = 1 / √(1-v²/c²)</code>.
+        </p>
+
+        <div class="demo-box">
+            <label for="speed">Speed as a fraction of light (c): <span id="vLabel">0.50</span></label>
+            <input type="range" min="0" max="0.99" step="0.01" value="0.50" id="speed">
+            <div class="output">
+                γ (gamma) = <span id="gamma">1.15</span><br>
+                1 hour on the ship = <span id="dilated">1.15</span> hours on Earth
+            </div>
+        </div>
+
+        <canvas id="spaceCanvas"></canvas>
+        <div class="label">White clock: Earth    Blue clock: Spaceship</div>
+    </section>
+
+    <!-- ============ GRAVITY ============ -->
+    <section id="gravity">
+        <h2>3. General Relativity: Gravity Slows Time Too</h2>
+        <p>
+            Near a massive object of mass <code>M</code> at radius <code>r</code>, the (weak-field) slowing is
+            <code>Δt_far / Δt_near ≈ 1 + GM/(rc²)</code>.
+            Use the slider to raise or lower an "elevator" around Earth.
+        </p>
+
+        <div class="demo-box">
+            <label for="height">Height above Earth's surface: <span id="hLabel">0</span> km</label>
+            <input type="range" id="height" min="0" max="20000" step="100">
+            <div class="output">
+                Your clock runs <span id="gFactor">1.00</span>% faster than a clock on the ground.
+            </div>
+        </div>
+        <p style="font-size:.9rem">
+            (Real GPS satellites at 20 000 km run about 45 µs/day faster—and engineers must correct for it!)
+        </p>
+    </section>
+
+    <!-- ============ BACKWARDS TIME ============ -->
+    <section id="backwards">
+        <h2>4. How Can Time Appear to Run Backwards?</h2>
+        <p>
+            Relativity never makes <em>your own</em> clock tick backward, but it does let the <strong>sequence</strong> of two distant events swap for observers moving fast enough. Below is Einstein's train-and-lightning thought experiment.
+        </p>
+
+        <div id="trainBox">
+            <div id="boltLeft"></div>
+            <div id="boltRight"></div>
+            <div id="train">
+                <div id="wheel1"></div><div id="wheel2"></div>
+            </div>
+        </div>
+        <div class="caption" id="trainCaption">
+            Ground observer: bolts hit <strong>simultaneously</strong>.
+        </div>
+
+        <button id="perspectiveBtn" style="margin-top:.8rem;padding:.4rem 1rem;border:none;background:#1d3557;color:#fff;border-radius:4px">Switch to Train's Perspective</button>
+
+        <p>
+            Because simultaneity is relative, the passenger concludes the <em>front</em> bolt struck first. For them, the rear event lies in their "future," so the ground observer's ordering looks flipped—<strong>as if time reversed at the back of the train</strong>. This reversal is geometric, not magical: no observer ever violates cause-and-effect along their own timeline.
+        </p>
+
+        <h3>So, can we travel into our own past?</h3>
+        <p>
+            General Relativity admits exotic solutions (rotating black holes, wormholes) that contain closed time-like curves—paths that loop to the past. Whether nature allows them is unknown; most physicists suspect quantum effects shut the door. For now, "backwards time" remains a fascinating <em>possibility</em>, not an engineering blueprint.
+        </p>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <section class="flex-col" style="background:#1d3557;color:#fff;margin-top:3rem;padding:2rem 1rem;text-align:center">
+        Made with simple HTML, CSS & JS • 2025
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
